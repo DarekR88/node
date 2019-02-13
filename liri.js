@@ -50,7 +50,7 @@ function movie() {
             console.log("Release Year: " + response.data.Year)
             console.log(response.data.Ratings[0].Source + ": " + response.data.Ratings[0].Value)
             console.log(response.data.Ratings[1].Source + ": " + response.data.Ratings[1].Value)
-            console.log("Country: " + response.data.country)
+            console.log("Country: " + response.data.Country)
             console.log("Languages: " + response.data.Language)
             console.log("Plot: " + response.data.Plot)
             console.log("Actors: " + response.data.Actors)
