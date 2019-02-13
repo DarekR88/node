@@ -16,13 +16,14 @@ switch (userChoice) {
         if (title != '') { bitCall() } else { title = 'cardi b'; bitCall() }
         break;
     case 'spotify-this-song':
-        spotCall();   
+        if (title != '') { spotCall() } else { title = 'the sign ace of base'; spotCall() }
         break;
     case 'movie-this':
         if (title != '') { movie() } else { title = 'mr nobody'; movie() }
         break;
     case 'do-what-it-says':
         dwis();
+        break;
     default:
         console.log("error")
 }
@@ -52,19 +53,31 @@ function movie() {
             console.log("Country: " + response.data.country)
             console.log("Languages: " + response.data.Language)
             console.log("Plot: " + response.data.Plot)
-            console.log("Actors: " + response.data.Actors) 
+            console.log("Actors: " + response.data.Actors)
         }
     )
 }
 
 function spotCall() {
-    spotify.search({ type: 'track', query: title }, function(err, data) {
+    spotify.search({ type: 'track', query: title }, function (err, data) {
         if (err) {
-          return console.log('Error occurred: ' + err);
-        } 
-      console.log('Artist: ' + data.tracks.items[0].album.artists[0].name)
-      console.log('Song title: ' + data.tracks.items[0].name)
-      console.log('Song Preview: ' + data.tracks.items[0].preview_url)
-      console.log('Album: ' + data.tracks.items[0].album.name)
-      });
+            return console.log('Error occurred: ' + err);
+        }
+        console.log('Artist: ' + data.tracks.items[0].album.artists[0].name)
+        console.log('Song title: ' + data.tracks.items[0].name)
+        console.log('Song Preview: ' + data.tracks.items[0].preview_url)
+        console.log('Album: ' + data.tracks.items[0].album.name)
+    });
+}
+
+function dwis() {
+    fs.readFile('random.txt', "utf8", function (error, data) {
+
+        if (error) {
+            return console.log(error);
+        }
+        var commandArr = data.split(',')
+        title = commandArr[1]
+        spotCall()
+    })
 }
