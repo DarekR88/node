@@ -12,4 +12,10 @@ For "movie-this" the movie's title, release year, IMDB rating, Rotten Tomatoes r
 
 The "do-what-it-says" command utilizes information from a txt file to return information based on what is in the txt file.
 for example this txt file will return spotify information on the song "I Want it That Way"
-![dwistxt](images/dwis.PNG?raw=true "example txt file")
+![dwistxt](images/dwis.PNG?raw=true "example txt file") 
+
+The user will need to provide their own .env file with their user ID-key and user-secret for the spotify api
+![id/key](images/dotenv.PNG?raw=true "example .env file")
+
+node modules required: axios, node-spotify-api, fs, moment
+Technologies: javaScript, node.js 

@@ -78,6 +78,22 @@ function dwis() {
         }
         var commandArr = data.split(',')
         title = commandArr[1]
-        spotCall()
+        userChoice = commandArr[0]
+        switch (userChoice) {
+            case 'concert-this':
+                if (title != '') { bitCall() } else { title = 'cardi b'; bitCall() }
+                break;
+            case 'spotify-this-song':
+                if (title != '') { spotCall() } else { title = 'the sign ace of base'; spotCall() }
+                break;
+            case 'movie-this':
+                if (title != '') { movie() } else { title = 'mr nobody'; movie() }
+                break;
+            case 'do-what-it-says':
+                dwis();
+                break;
+            default:
+                console.log("error")
+        }
     })
 }
