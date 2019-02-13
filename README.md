@@ -18,4 +18,5 @@ The user will need to provide their own .env file with their user ID-key and use
 ![id/key](images/dotenv.PNG?raw=true "example .env file")
 
 node modules required: axios, node-spotify-api, fs, moment
-Technologies: javaScript, node.js 
+
+Technologies used: javaScript, node.js 
