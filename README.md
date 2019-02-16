@@ -1,7 +1,13 @@
 # node
 Liri Media Robot
 Liri media robot is a simple application that uses node.js, several apis, and the terminal to take in user input and return information from the apis. 
-To begin the user will input "node liri.js" foloowed by 1 of 4 options "concert-this", "spotify-this-song", "movies-this", or "do-what-it-says".
+To begin the user will input node liri.js folowed by 1 of 4 options 
+
+concert-this <br /> 
+spotify-this-song <br /> 
+movies-this <br /> 
+do-what-it-says <br />
+
 Depending on the chosen option the user will then input an artist for "concert-this", a song for "spotify-this-song", or a movie title for "movie-this". (the option "do-what-it-says" does not take another augument and it's output will not change if given one)
 ![userEx](images/userInput.PNG?raw=true "Example User Input")
 
